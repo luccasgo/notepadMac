@@ -9,15 +9,15 @@ class Notepad:
         self.root.geometry("800x600")
         self.root.attributes('-topmost', True)
         
-        # Text area
+     
         self.text_area = tk.Text(self.root, wrap='word')
         self.text_area.pack(expand=1, fill='both')
         
-        # Menu bar
+    
         self.menu_bar = tk.Menu(self.root)
         self.root.config(menu=self.menu_bar)
         
-        # File menu
+  
         self.file_menu = tk.Menu(self.menu_bar, tearoff=0)
         self.menu_bar.add_cascade(label="Arquivo", menu=self.file_menu)
         
@@ -27,7 +27,7 @@ class Notepad:
         self.file_menu.add_separator()
         self.file_menu.add_command(label="Sair", command=self.root.quit)
         
-        # Transparency scale
+
         self.transparency_scale = tk.Scale(self.root, from_=20, to=100, orient='horizontal', label='Transparência', command=self.set_transparency)
         self.transparency_scale.pack(fill='x')
         self.transparency_scale.set(100)
